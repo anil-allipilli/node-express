@@ -53,13 +53,14 @@ app.get('/', (request, response) => {
 
 app.get('/about', (request, response) => {
     response.render('about.hbs', {
-        pageTitle: 'About Page!',
-        msg: "Hello everyone"
+        pageTitle: 'About Page!'
+        
     }
 )});
 app.get('/hello', (request, response) => {
     response.render('hello.hbs', {
-        pageTitle: 'Hello Page!'
+        pageTitle: 'Hello Page!',
+        msg: "Hello everyone"
     }
 )});
 app.get('/bad', (request, response) => {
