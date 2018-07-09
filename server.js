@@ -53,10 +53,15 @@ app.get('/', (request, response) => {
 
 app.get('/about', (request, response) => {
     response.render('about.hbs', {
-        pageTitle: 'About Page!'
+        pageTitle: 'About Page!',
+        msg: "Hello everyone"
     }
 )});
-
+app.get('/hello', (request, response) => {
+    response.render('hello.hbs', {
+        pageTitle: 'Hello Page!'
+    }
+)});
 app.get('/bad', (request, response) => {
     response.send({
         errorMessage: 'Unable to handle request'
